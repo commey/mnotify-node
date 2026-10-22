@@ -1,4 +1,4 @@
-module.exports = {
+const responses: Record<string, string> = {
 	"400": "Bad Request",
 	"401": "Unauthorized",
 	"403": "Forbidden",
@@ -25,4 +25,6 @@ module.exports = {
 	"4013": "voice id does not exist",
 	"4014": "Sender ID is not registered. Please contact our support team via senderids@mnotify.com or call 0200896265 for assistance",
 	"4015": "Sender Name and Purpose must not be empty"
-}
+};
+
+export default responses;

@@ -1,14 +1,20 @@
 {
   "name": "mnotify-node",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "mNotify nodeJS connector",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/commisol/mnotify-node.git"
+    "url": "git+https://github.com/commey/mnotify-node.git"
   },
   "keywords": [
     "mnotify",
@@ -18,11 +24,14 @@
   "author": "Joshua Commey",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/commisol/mnotify-node/issues"
+    "url": "https://github.com/commey/mnotify-node/issues"
   },
-  "homepage": "https://github.com/commisol/mnotify-node#readme",
+  "homepage": "https://github.com/commey/mnotify-node#readme",
   "dependencies": {
-    "axios": "^0.21.0"
+    "axios": "^1.7.0"
   },
-  "publishConfig": { "registry": "https://npm.pkg.github.com/" }
+  "devDependencies": {
+    "typescript": "^5.5.0",
+    "@types/node": "^20.14.0"
+  }
 }
